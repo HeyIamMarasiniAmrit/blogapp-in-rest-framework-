@@ -5,3 +5,5 @@ i create blogapp in using django rest_faramework
 
 i create crud operation and suceessful
 ![Image](https://github.com/user-attachments/assets/9416c1e7-53ce-4c17-b32f-e2ab695c9143)
+
+![Image](https://github.com/user-attachments/assets/1e5e6c2d-0c73-4b7f-9516-e1372b3818d1)
