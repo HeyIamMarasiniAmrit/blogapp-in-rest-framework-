@@ -27,7 +27,7 @@ def CreatePost(request):
         serializer.save()
         return Response({"success: The post was Sucessfully created"}, status=201)
     else:
-        return Response(serializer.errors, status=400)
+         return Response(serializer.errors, status=400)
 
 
 @api_view(['DELETE'])
