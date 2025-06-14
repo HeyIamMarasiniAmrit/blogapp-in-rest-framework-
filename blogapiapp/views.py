@@ -13,6 +13,11 @@ from .serializers import postserializer
 @api_view(['GET'])
 def index(request):
     return Response({"sucess": "The setup was sucessful amrit"})
+    
+@api_view(['GET'])
+def index(request):
+    return Response({"sucess": "The setup was sucessful amrit"})
+
 
 @api_view(['GET'])
 def GetAllPosts(request):
