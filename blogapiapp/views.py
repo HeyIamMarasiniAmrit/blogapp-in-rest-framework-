@@ -54,6 +54,7 @@ def GetPost(request):
         return Response(serializer.data)
     except post.DoesNotExist:
         return Response({"Error: The post does not exist"}, status=404)
+        
 
 
 @api_view(['PUT'])
