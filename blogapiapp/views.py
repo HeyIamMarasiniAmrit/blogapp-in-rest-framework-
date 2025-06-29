@@ -73,3 +73,15 @@ def UpdatePost(request):
         return Response({"Success: The Post is change"})
     except post.DoesNotExist:
         return Response({"Error: The post does not exist"}, status=404)
+
+@api_view(['DELETE'])
+def DELETEPost(request):
+    post_id = request.data.get('post_id')
+    get_new_title = request.data.get('new_title')
+    get_new_content = request.data.get('new_content')
+    try:
+        post = Post.objects.get(id=post_id)
+        if get_new_title:
+            post.title = get_new_title
+        if get_new_content:
+            post.content = get_new_content
