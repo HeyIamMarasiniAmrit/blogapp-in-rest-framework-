@@ -11,3 +11,15 @@ i create crud operation and suceessful
 ![Image](https://github.com/user-attachments/assets/1e5e6c2d-0c73-4b7f-9516-e1372b3818d1)
 
 ![Image](https://github.com/user-attachments/assets/caf05ae7-05c1-4a45-8882-ed82cb21e701)
+✅ New Features to Add
+Like / Dislike a Post
+
+Search Posts by Title
+
+Pagination for GetAllPosts
+
+Post Filtering by Date or Author
+
+Toggle Publish Status
+
+
