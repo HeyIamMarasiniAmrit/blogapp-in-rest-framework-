@@ -6,10 +6,12 @@ from .models import post as Post
 from .serializers import postserializer
 from django.db.models import Q
 
+
 # ✅ Basic API Check
 @api_view(['GET'])
 def index(request):
     return Response({"success": "The setup was successful, Amrit"})
+    
 
 # ✅ Get All Posts with Pagination
 @api_view(['GET'])
@@ -20,6 +22,7 @@ def GetAllPosts(request):
     result_page = paginator.paginate_queryset(posts, request)
     serializer = postserializer(result_page, many=True)
     return paginator.get_paginated_response(serializer.data)
+    
 
 # ✅ Create Post
 @api_view(['POST'])
@@ -29,6 +32,7 @@ def CreatePost(request):
         serializer.save()
         return Response({"success": "The post was successfully created"}, status=201)
     return Response(serializer.errors, status=400)
+    
 
 # ✅ Get a Single Post by ID
 @api_view(['GET'])
@@ -40,6 +44,7 @@ def GetPost(request):
         return Response(serializer.data)
     except Post.DoesNotExist:
         return Response({"error": "The post does not exist"}, status=404)
+        
 
 # ✅ Update Post
 @api_view(['PUT'])
